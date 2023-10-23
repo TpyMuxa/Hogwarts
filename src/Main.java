@@ -25,60 +25,11 @@ public class Main {
                 4, 11, 15, 10, 8);
         Slytherin gregoryGoyle = new Slytherin("Грегори Гойл", 3, 3,
                 10, 10, 8, 7, 4);
-        showCharacter(dracoMalfoy);
-        compareStudentFacultyGryffindor(hermioneGranger, harryPotter);
-        compareStudentFacultyHufflepuff(cedricDiggory, justinFinchFletchley);
-        compareStudentFacultyRavenclaw(padmaPatil, marcusBelby);
-        compareStudentFacultySlytherin(gregoryGoyle, dracoMalfoy);
-        printPowerfullCharacter(dracoMalfoy, harryPotter);
-    }
-
-    private static void showCharacter(hogwarts studentName) {
-
-        System.out.println(studentName.toString());
-    }
-
-    private static void compareStudentFacultyGryffindor(Gryffindor first, Gryffindor second) {
-        if (first.getTotalPoints() > second.getTotalPoints()) {
-            System.out.println(first.getNameCharacter() + " лучший Гриффиндорец, чем " + second.getNameCharacter());
-        } else {
-            System.out.println(second.getNameCharacter() + " лучший Гриффиндорец, чем " + first.getNameCharacter());
-        }
-    }
-
-    private static void compareStudentFacultyHufflepuff(Hufflepuff first, Hufflepuff second) {
-        if (first.getTotalPoints() > second.getTotalPoints()) {
-            System.out.println(first.getNameCharacter() + " лучший Пуффендуец, чем " + second.getNameCharacter());
-        } else {
-            System.out.println(second.getNameCharacter() + " лучший Пуффендуец, чем " + first.getNameCharacter());
-        }
-    }
-
-    private static void compareStudentFacultyRavenclaw(Ravenclaw first, Ravenclaw second) {
-        if (first.getTotalPoints() > second.getTotalPoints()) {
-            System.out.println(first.getNameCharacter() + " лучший Когтевранец, чем " + second.getNameCharacter());
-        } else {
-            System.out.println(second.getNameCharacter() + " лучший Когтевранец, чем " + first.getNameCharacter());
-        }
-    }
-
-    private static void compareStudentFacultySlytherin(Slytherin first, Slytherin second) {
-        if (first.getTotalPoints() > second.getTotalPoints()) {
-            System.out.println(first.getNameCharacter() + " лучший Слизеринец, чем " + second.getNameCharacter());
-        } else {
-            System.out.println(second.getNameCharacter() + " лучший Слизеринец, чем " + first.getNameCharacter());
-        }
-    }
-
-    private static void printPowerfullCharacter(hogwarts first, hogwarts second) {
-        if (first.getTotalPointsMagic() > second.getTotalPointsMagic()) {
-            System.out.println(first.getNameCharacter() + " обладает большей мощностью магии, чем " +
-                    second.getNameCharacter());
-        } else if (first.getTotalPointsMagic() < second.getTotalPointsMagic()) {
-            System.out.println(second.getNameCharacter() + " обладает большей мощностью магии, чем " +
-                    first.getNameCharacter());
-        } else {
-            System.out.println(first.getNameCharacter() + " и " + second.getNameCharacter() + " равны по силе магии");
-        }
+        hogwarts.showCharacter(dracoMalfoy);
+        hogwarts.compareStudentFacultyGryffindor(hermioneGranger, harryPotter);
+        hogwarts.compareStudentFacultyHufflepuff(cedricDiggory, justinFinchFletchley);
+        hogwarts.compareStudentFacultyRavenclaw(padmaPatil, marcusBelby);
+        hogwarts.compareStudentFacultySlytherin(gregoryGoyle, dracoMalfoy);
+        hogwarts.printPowerfullCharacter(dracoMalfoy, harryPotter);
     }
 }
